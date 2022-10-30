@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={foto} className="App-logo" alt="logo" />
         <p>
-          Personal Portfolio React App - Template: Typescript <3
+          Personal Portfolio React App - Template: Typescript
         </p>
         <a
           className="App-link"
