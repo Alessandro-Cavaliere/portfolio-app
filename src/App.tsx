@@ -1,25 +1,22 @@
-import React from 'react';
-import foto from './assets/foto.jpg';
 import './App.css';
+import { BrowserRouter as Router,Route, Routes, useRoutes } from 'react-router-dom';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
 
 function App() {
+  const AppRoutes = () => {
+    let routes = useRoutes([
+      { path: "/", element: <Home /> },
+      { path: "component2", element: <></> },
+    ]);
+    return routes;
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={foto} className="App-logo" alt="logo" />
-        <p>
-          Personal Portfolio React App - Template: Typescript- HELL YES!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar/>
+       <AppRoutes/>
+    </Router>
   );
 }
 
