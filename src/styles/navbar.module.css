@@ -1,0 +1,52 @@
+.nav{
+    display: block;
+    align-items: center;
+    background: #243644;
+    height: 100px;
+}
+.nav_row{
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_row_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: ease-in 0.5s;
+}
+
+.nav_row_container:hover .p_style{
+    display: contents;
+    color: white;
+    font-family: Sequel, sans-serif;
+    font-size: 3vh;
+    font-weight: 800;
+    margin: 10px 0px 0px 11px;
+}
+
+
+.p_style{
+    display: none;
+    color: white;
+    font-family: Sequel, sans-serif;
+    font-size: 3vh;
+    font-weight: 800;
+    margin: 10px 0px 0px 11px;
+}
+
+.image_style{
+    width: 70px;
+    margin-left: 20px;
+}
+    
+@keyframes p-animation {
+    from {display: none;}
+    to {display: current;}
+  }
