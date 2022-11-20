@@ -8,6 +8,7 @@ export default function Home() {
             <div className={`${ HomeCSS.container} ${containerChangeIsVisible? HomeCSS.container_variation: ''}`}>
                 <div className={HomeCSS.container__children}>
                     <h1 className={`${ HomeCSS.container__h1} ${containerChangeIsVisible? HomeCSS.container__h1_variation: ''}`}>Cavaliere <br/>Alessandro</h1>
+                    <p>Computer Science student.</p>
                 </div>
                 <img src={mePhoto} className={HomeCSS.image_style}/>
             </div>

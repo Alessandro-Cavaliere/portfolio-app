@@ -17,8 +17,10 @@
 }
 
 .container__children{
+    width: auto;
+    height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -27,9 +29,9 @@
 .container__h1{
     font-weight: 800;
     color: white;
-    font-family: Sequel, sans-serif;
+    font-family: "proxima-nova","Helvetica Neue";
     text-transform: uppercase;
-    font-size: 6vw;
+    font-size: 3vw;
     line-height: 0.9;
     transition: color 0.5s ease-out 0s;
     position: absolute;
@@ -45,4 +47,14 @@
     width: 700px;
     position: fixed;
     right: 0;
+    animation: 3s ease-in-out fadeIn;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
