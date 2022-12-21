@@ -1,21 +1,23 @@
 import './App.css';
-import { BrowserRouter as Router,Route, Routes, useRoutes } from 'react-router-dom';
+import { BrowserRouter as Router, Outlet, useRoutes } from 'react-router-dom';
 import Home from './components/Home';
-import Navbar from './components/Navbar';
+import { WavyContainer, WavyLink } from 'react-wavy-transitions';
 
-function App() {
+function App(){
+
+  
   const AppRoutes = () => {
     let routes = useRoutes([
-      { path: "/", element: <Home /> },
-      { path: "component2", element: <></> },
+      { path: "/", element: <Home/> },
     ]);
     return routes;
   };
 
   return (
+    
     <Router>
-      <Navbar/>
-       <AppRoutes/>
+      <WavyContainer />
+      <AppRoutes/>
     </Router>
   );
 }
