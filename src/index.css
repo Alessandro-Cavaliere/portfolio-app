@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'OPTIVenus-BoldExtended';
+  src: url('./assets/fonts/OPTIVenus-BoldExtended.ttf.svg') format('truetype'),
+       url('./assets/fonts/OPTIVenus-BoldExtended.ttf.woff') format('woff');
+}
+
 *{
   /*Global CSS variables*/
   --error-color: red;
@@ -7,6 +13,8 @@
   margin: 0;
   padding: 0;
 }
+
+
 
 body {
   margin: 0;
