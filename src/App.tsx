@@ -1,25 +1,12 @@
-import './App.css';
-import { BrowserRouter as Router, Outlet, useRoutes } from 'react-router-dom';
 import Home from './components/Home';
-import { WavyContainer, WavyLink } from 'react-wavy-transitions';
+import './App.css'
 
-function App(){
-
-  
-  const AppRoutes = () => {
-    let routes = useRoutes([
-      { path: "/", element: <Home/> },
-    ]);
-    return routes;
-  };
-
+function App() {
   return (
-    
-    <Router>
-      <WavyContainer />
-      <AppRoutes/>
-    </Router>
-  );
+    <>
+      <Home/> 
+    </>
+  )
 }
 
-export default App;
+export default App
