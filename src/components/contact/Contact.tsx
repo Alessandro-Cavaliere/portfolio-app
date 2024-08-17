@@ -3,6 +3,9 @@ import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
+/*//////////////////////////////////////////////////////////////
+                             CONSTANTS 
+  //////////////////////////////////////////////////////////////*/
 const variants = {
   initial: {
     y: 500,
@@ -18,18 +21,28 @@ const variants = {
   },
 };
 
+/**
+ *  Contact.tsx component -> renders the contact section of the homepage with the form to send an email
+ *  @returns JSX.Element that represents the contact component
+ */
 const Contact = () => {
-  const ref = useRef();
-  const formRef = useRef();
+  /*//////////////////////////////////////////////////////////////
+                            STATES DECLARATIONS
+  //////////////////////////////////////////////////////////////*/
+  const ref = useRef(null);
+  const formRef = useRef(null);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-
   const isInView = useInView(ref, { margin: "-100px" });
 
+  /*//////////////////////////////////////////////////////////////
+                              FUNCTIONS
+  //////////////////////////////////////////////////////////////*/
   const sendEmail = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
-    emailjs
+    if (formRef.current) {
+      emailjs
       .sendForm(
         "service_94y20xo",
         "template_v10u2oh",
@@ -44,8 +57,12 @@ const Contact = () => {
           setError(true);
         }
       );
+    }
   };
 
+  /*//////////////////////////////////////////////////////////////
+                              RETURN  
+  //////////////////////////////////////////////////////////////*/
   return (
     <motion.div
       ref={ref}
@@ -55,18 +72,18 @@ const Contact = () => {
       whileInView="animate"
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Let’s work together</motion.h1>
+        <motion.h1 variants={variants}>Contact Me!</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <span>alessandrocavaliere41@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Hello street New York</span>
+          <span>Salerno</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>+1 234 5678</span>
+          <span>+39 3200786868</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
