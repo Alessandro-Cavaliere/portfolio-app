@@ -44,8 +44,8 @@ const Contact = () => {
     if (formRef.current) {
       emailjs
       .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
+        "service_94xw8pc",
+        "template_ubz04rb",
         formRef.current,
         "pX_2hasGmGcuvjXIW"
       )
