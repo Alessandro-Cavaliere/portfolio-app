@@ -46,7 +46,9 @@ const Navbar = () => {
             </a>
             <p className="p_style" style={{maxWidth: pVisible}}>Alessandro Cavaliere</p>
           </div>
+          
         </motion.span>
+        <p> ⚠️ The website is in BETA </p>
         <div className="social">
           <a href="https://www.linkedin.com/in/alessandro-cavaliere41/" target="_blank" rel="noopener noreferrer">
             <img src={linkedin} alt="" style={{width:40,height:40}}/>
