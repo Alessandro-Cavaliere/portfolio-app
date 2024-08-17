@@ -1,0 +1,103 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    span {
+      font-weight: bold;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .img-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    animation: 1s ease-out 0s 1 fromLeftToRight;
+  }
+
+  .img-div:hover > *{
+    max-width: 100%;
+  }
+
+  .p_style{
+    display: block;
+    color: white;
+    font-family: Sequel, sans-serif;
+    font-size: 5vh;
+    font-family: "sans", monospace;
+    width: auto;
+    max-width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: max-width 0.3s linear;
+    color: hsl(0, 0%, 98%);
+    font-size: 3vh;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: .10em;
+    line-height: 1.8em;
+    font-weight: 800;
+    margin: 10px 0px 0px 15px;
+    background: linear-gradient(to right,hsl(0, 0%, 100%) 0, hsl(0, 0%, 30%) 10% , hsl(0, 0%, 100%) 20%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 10s infinite linear;
+  }
+
+  @keyframes p-animation {
+    from {display: none;}
+    to {display: current;}
+    from {
+        translate: 0 20px;
+    }
+    to {
+        translate: none;
+        opacity: 1;
+    }
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 650px;
+    }
+  }
+
+  .image_style{
+    width: 70px;
+    width: 50px;
+  }
+
+  
+}
