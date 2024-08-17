@@ -27,7 +27,7 @@ const variants = {
  */
 const Contact = () => {
   /*//////////////////////////////////////////////////////////////
-                            STATES DECLARATIONS
+                            STATE DECLARATIONS
   //////////////////////////////////////////////////////////////*/
   const ref = useRef(null);
   const formRef = useRef(null);
