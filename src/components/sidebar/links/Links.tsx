@@ -31,7 +31,7 @@ const Links = () => {
   /*//////////////////////////////////////////////////////////////
                              CONSTANTS
   //////////////////////////////////////////////////////////////*/
-  const items = ["Homepage", "Services", "Portfolio", "Contact", "About"]; // When clicked, it will scroll to the respective section
+  const items = ["Homepage", /*"Services",*/ "Projects", "Contact", /*"About"*/]; // When clicked, it will scroll to the respective section
 
   /*//////////////////////////////////////////////////////////////
                               RETURN
