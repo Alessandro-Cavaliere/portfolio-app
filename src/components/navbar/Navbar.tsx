@@ -48,13 +48,13 @@ const Navbar = () => {
           </div>
         </motion.span>
         <div className="social">
-          <a href="https://www.linkedin.com/in/alessandro-cavaliere41/">
+          <a href="https://www.linkedin.com/in/alessandro-cavaliere41/" target="_blank" rel="noopener noreferrer">
             <img src={linkedin} alt="" style={{width:40,height:40}}/>
           </a>
-          <a href="https://x.com/alessandrocav41">
+          <a href="https://x.com/alessandrocav41" target="_blank" rel="noopener noreferrer">
             <img src={x} alt="" style={{width:40,height:40}}/>
           </a>
-          <a href="https://github.com/Alessandro-Cavaliere">
+          <a href="https://github.com/Alessandro-Cavaliere" target="_blank" rel="noopener noreferrer">
             <img src={github} alt="" style={{width:40,height:40}}/>
           </a>
         </div>
