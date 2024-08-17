@@ -7,6 +7,10 @@ import github from "../../assets/socials/github.svg"
 import "./navbar.scss";
 import { motion } from "framer-motion";
 
+/**
+ * Navbar.tsx component -> renders the navbar of the application
+ * @returns JSX.Element of the Navbar component
+ */
 const Navbar = () => {
   /*//////////////////////////////////////////////////////////////
                             STATE DECLARATIONS
@@ -37,19 +41,21 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="img-div">
-            <img src={acPhoto} alt="logo" className="image_style"/>
+            <a href="http://localhost:5173">
+              <img src={acPhoto} alt="logo" className="image_style"/>
+            </a>
             <p className="p_style" style={{maxWidth: pVisible}}>Alessandro Cavaliere</p>
           </div>
         </motion.span>
         <div className="social">
           <a href="https://www.linkedin.com/in/alessandro-cavaliere41/">
-            <img src={linkedin} alt="" />
+            <img src={linkedin} alt="" style={{width:40,height:40}}/>
           </a>
           <a href="https://x.com/alessandrocav41">
-            <img src={x} alt="" />
+            <img src={x} alt="" style={{width:40,height:40}}/>
           </a>
           <a href="https://github.com/Alessandro-Cavaliere">
-            <img src={github} alt="" />
+            <img src={github} alt="" style={{width:40,height:40}}/>
           </a>
         </div>
       </div>
