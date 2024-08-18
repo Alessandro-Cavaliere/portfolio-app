@@ -1,6 +1,9 @@
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 import "./parallax.scss";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { distance, motion, useScroll, useTransform } from "framer-motion";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import type { Container, Engine } from "tsparticles-engine";
 
 /**
  * Parallax.tsx component -> renders the parallax effect on the screen
@@ -21,6 +24,19 @@ const Parallax = ({ type }: { type: string }) => {
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
+  const particlesInit = useCallback(async (engine :Engine) => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    //await loadFull(engine);
+    await loadSlim(engine);
+}, []);
+
+const particlesLoaded = useCallback(async (container: Container | undefined) => {
+  await console.log(container);
+}, []);
+
   /*//////////////////////////////////////////////////////////////
                              RETURN
   //////////////////////////////////////////////////////////////*/
@@ -38,17 +54,93 @@ const Parallax = ({ type }: { type: string }) => {
       <motion.h1 style={{ y: yText }}>
         {type === "services" ? "What I Do?" : "What I Did?"}
       </motion.h1>
-      <motion.div className="mountains"></motion.div>
       <motion.div
-        className="planets"
+        className="particles"
         style={{
-          y: yBg,
-          backgroundImage: `url(${
-            type === "services" ? "/planets.png" : "/sun.png"
-          })`,
+          y: yBg
         }}
-      ></motion.div>
+      >
+      <Particles 
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={{
+          background: {
+              color: {
+                  value: "linear-gradient(180deg, rgb(9, 14, 17), rgb(47, 73, 90))",
+              },
+          },
+          container:{
+            
+          },
+          fpsLimit: 180,
+          interactivity: {
+              events: {
+                  onClick: {
+                      enable: true,
+                      mode: "push",
+                  },
+                  onHover: {
+                      enable: true,
+                      mode: "repulse",
+                  },
+                  resize: true,
+              },
+              modes: {
+                  push: {
+                      quantity: 4,
+                  },
+                  repulse: {
+                      distance: 200,
+                      duration: 0.4,
+                  }
+              },
+          },
+          particles: {
+              color: {
+                  value: "#ffffff",
+              },
+              links: {
+                  color: "#ffffff",
+                  distance: 150,
+                  enable: true,
+                  opacity: 0.5,
+                  width: 1,
+              },
+              move: {
+                  direction: "none",
+                  enable: true,
+                  outModes: {
+                      default: "bounce",
+                  },
+                  random: false,
+                  speed: 3,
+                  straight: false,
+              },
+              number: {
+                  density: {
+                      enable: true,
+                      area: 800,
+                  },
+                  value: 100,
+              },
+              opacity: {
+                  value: 0.5,
+              },
+              shape: {
+                  type: "circle",
+              },
+              size: {
+                  value: { min: 1, max: 3 },
+              },
+          },
+          detectRetina: true,
+      }}
+  />
+      </motion.div>
+      
       <motion.div style={{ x: yBg }} className="stars"></motion.div>
+      
     </div>
   );
 };
