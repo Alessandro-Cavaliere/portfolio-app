@@ -26,8 +26,11 @@ const itemVariants = {
     opacity: 0,
   },
 };
+type LinksProps = {
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-const Links = () => {
+const Links: React.FC<LinksProps> = ({ setOpen }) => {
   /*//////////////////////////////////////////////////////////////
                              CONSTANTS
   //////////////////////////////////////////////////////////////*/
@@ -45,6 +48,7 @@ const Links = () => {
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => setOpen(false) }
         >
           {item}
         </motion.a>

@@ -1,6 +1,6 @@
 import { useCallback, useRef } from "react";
 import "./parallax.scss";
-import { distance, motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import type { Container, Engine } from "tsparticles-engine";
@@ -46,13 +46,13 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
       ref={ref}
       style={{
         background:
-          type === "services"
-            ? "linear-gradient(180deg, rgb(9, 14, 17), rgb(47, 73, 90))"
+          type === "experiences"
+            ? "linear-gradient(180deg, rgb(47, 73, 90),rgb(9, 14, 17))"
             : "linear-gradient(180deg, rgb(47, 73, 90),rgb(9, 14, 17))",
       }}
     >
       <motion.h1 style={{ y: yText }}>
-        {type === "services" ? "What I Do?" : "What I Did?"}
+        {type === "experiences" ? "My Experiences" : "What I Did?"}
       </motion.h1>
       <motion.div
         className="particles"
@@ -76,10 +76,6 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
           fpsLimit: 180,
           interactivity: {
               events: {
-                  onClick: {
-                      enable: true,
-                      mode: "push",
-                  },
                   onHover: {
                       enable: true,
                       mode: "repulse",

@@ -29,6 +29,7 @@ html {
     overflow: hidden;
   }
   
+
   @mixin mobile {
     @media (max-width: 738px) {
       @content;
@@ -44,24 +45,3 @@ html {
       @content;
     }
   }
-
-//   body::-webkit-scrollbar{
-//     width: 1.5vh;
-//   }
-  
-//   body::-webkit-scrollbar-thumb{
-//     background: #7775;
-//     border-radius: 15px;
-//   }
-  
-//   body::-webkit-scrollbar-thumb:hover{
-//     background: #7777;
-//   }
-  
-//   body::-webkit-scrollbar-track{
-//     border-radius: 15px;
-//   }
-  
-//   body::-webkit-scrollbar-track:hover{
-//     background: #3338;
-//   }
