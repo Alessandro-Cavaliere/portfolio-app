@@ -33,7 +33,7 @@ const Contact = () => {
   const formRef = useRef(null);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-10px" });
 
   /*//////////////////////////////////////////////////////////////
                               FUNCTIONS
@@ -64,6 +64,10 @@ const Contact = () => {
                               RETURN  
   //////////////////////////////////////////////////////////////*/
   return (
+    <>
+    <motion.div 
+      className="contact2"
+    >
     <motion.div
       ref={ref}
       className="contact"
@@ -76,6 +80,10 @@ const Contact = () => {
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
           <span>alessandrocavaliere41@gmail.com</span>
+        </motion.div>
+        <motion.div className="item" variants={variants}>
+          <h2>Languages</h2>
+          <span>English, Italian</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
@@ -128,6 +136,9 @@ const Contact = () => {
         </motion.form>
       </div>
     </motion.div>
+    <p className="copyright">Copyright © 2024 All copyrights reserved to Alessandro Cavaliere</p>
+    </motion.div>
+    </>
   );
 };
 

@@ -1,12 +1,25 @@
 @import "../../app.scss";
 
-.contact {
+.copyright {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem; 
+  color: #555; 
+}
+
+.contact2{
   height: 100%;
-  max-width: 1366px;
-  margin: auto;
+  max-width: 100%;   
+  display: flex;
+  flex-direction: column;
+}
+.contact {
+  margin: auto auto 0px auto;
   display: flex;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
 
   @include mobile {
     width: 100%;
@@ -15,10 +28,10 @@
   }
 
   .textContainer {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    width: 185%;
 
     @include mobile {
       gap: 20px;
@@ -42,8 +55,8 @@
   }
 
   .formContainer {
-    flex: 1;
     position: relative;
+    width: 100%;
     
     @include mobile {
       padding: 50px;
@@ -61,10 +74,10 @@
     form {
       display: flex;
       flex-direction: column;
-      gap: 20px;
 
       input,
       textarea {
+        margin-top: 20px;
         padding: 20px;
         background-color: transparent;
         border: 1px solid white;
@@ -77,6 +90,7 @@
       }
 
       button {
+        margin-top: 20px;
         padding: 20px;
         border: none;
         background-color: orange;
