@@ -65,7 +65,7 @@ return (
                 {item.img.length > 1 ?
                 <ImageCarousel images={item.img} refContainer={ref} />:
                 <div className="imageContainer" ref={ref}>
-                    <img style={{width:"80%"}} src={item.img[0]} alt="" />
+                    <img style={{width:"80%", borderRadius: "20px"}} src={item.img[0]} alt="" />
                 </div>
                 }
                 <motion.div className="textContainer" style={{y}}>
