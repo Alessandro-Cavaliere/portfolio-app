@@ -96,7 +96,7 @@ return (
         <div className="container">
             <div className="wrapper">
                 <div className="imageContainer" ref={ref}>
-                    <img src={item.img} alt="" />
+                    <img src={item.img} alt="" style={{ borderRadius: "20px"}}/>
                 </div>
                 <motion.div className="textContainer" style={{ y }}>
                     <h2 style={{fontSize:"8vh"}}>{item.title}</h2>

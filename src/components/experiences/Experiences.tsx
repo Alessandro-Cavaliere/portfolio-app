@@ -68,7 +68,7 @@ return (
                     <img style={{width:"80%"}} src={item.img[0]} alt="" />
                 </div>
                 }
-                <motion.div className="textContainer">
+                <motion.div className="textContainer" style={{y}}>
                     <h2 style={{fontSize:"8vh"}}>{item.title}</h2>
                     <p>{item.desc}</p>
                     {item.link &&
