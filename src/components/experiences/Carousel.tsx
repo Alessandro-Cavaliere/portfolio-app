@@ -13,33 +13,27 @@ export default function ImageCarousel({ images, refContainer }) {
   };
 
   return (
-    <div className="relative w-full overflow-hidden rounded-2xl" ref={refContainer}>
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={images[index]}
-          src={images[index]}
-          alt={`Slide ${index}`}
-          className="w-full h-auto object-cover"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-        />
-      </AnimatePresence>
-
-      {/* Navigation buttons */}
-      <button
-        onClick={handlePrev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 px-2 py-1 rounded-full shadow"
-      >
-        ◀
-      </button>
-      <button
-        onClick={handleNext}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 px-2 py-1 rounded-full shadow"
-      >
-        ▶
-      </button>
+    <div
+      ref={refContainer}
+      className="relative w-full flex justify-center items-center overflow-hidden"
+    >
+      {/* Wrapper per immagine + overlay */}
+      <div className="">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={images[index]}
+            src={images[index]}
+            alt={`Slide ${index}`}
+            onClick={handleNext}
+            className="w-full h-auto object-cover z-0"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            style={{width:"100%", borderRadius:"20px", cursor:"pointer"}}
+          />
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

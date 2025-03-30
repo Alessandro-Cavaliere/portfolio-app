@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import "./projects.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import zkpoex from "/home/galexela/Documents/GitHub/portfolio-app/src/assets/projects/zkp.jpeg";
+import pentest from "/home/galexela/Documents/GitHub/portfolio-app/src/assets/projects/pentest.png";
 
 /*//////////////////////////////////////////////////////////////
                          PROJECT OBJECTS
@@ -8,9 +10,9 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "Zero-Knowledge of Exploit - Cybersecurity MSc Thesis",
-    img: "https://raw.githubusercontent.com/Alessandro-Cavaliere/Modbus2Chain/MC_BE_BC/app/assets/LogoProgetto.png",
-    desc: "This project is a Rust-based toolkit for proving Ethereum smart contract exploits using Zero-Knowledge Proofs. The project explores proving contract vulnerabilities without revealing exploit details, ensuring security and verifiability. Running bug bounty programs in DeFi is challenging, often difficult to manage, and not always honored. This lack of incentives can lead to undisclosed exploits, weakening the security of the DeFi ecosystem. This software allows whitehat hackers to submit a cryptographic proof showing that a contract is exploitable without revealing exploit details. Once verified, the bounty can be automatically paid. This approach benefits both parties: 1- Whitehats have assurance they will receive immediate rewards upon proof verification. 2- Teams can directly fix the identified exploit without needing further coordination. Details remain confidential, ensuring discreet resolution.",
+    title: "Zero-Knowledge of Exploit",
+    img: zkpoex,
+    desc: "This is my MSc Thesis project. This project is a Rust-based toolkit for proving Ethereum smart contract exploits using Zero-Knowledge Proofs. The project explores proving contract vulnerabilities without revealing exploit details, ensuring security and verifiability. Running bug bounty programs in DeFi is challenging, often difficult to manage, and not always honored. This lack of incentives can lead to undisclosed exploits, weakening the security of the DeFi ecosystem. This software allows whitehat hackers to submit a cryptographic proof showing that a contract is exploitable without revealing exploit details. Once verified, the bounty can be automatically paid.",
   },
   {
     id: 2,
@@ -36,7 +38,7 @@ const items = [
   {
     id: 5,
     title: "PT-Vulnerable-VM",
-    img: "https://raw.githubusercontent.com/Alessandro-Cavaliere/PT-Vulnerable-VM/main/readmePhotos/PENTEST.png",
+    img: pentest,
     desc: "Project for the exam of Penetration Testing & Ethical Hacking in the second year of the master's degree in CyberSecurity. This project is an exploration of the use of Long Short-Term Memory (LSTM) networks for emotion recognition. The project consists of a Virtual Machine (VM), intentionally vulnerable (vulnerable by design), aimed at testing and improving users' cybersecurity skills. Given that penetration testing is a discipline requiring practical abilities, this VM offers a safe, practical platform to learn, test, and enhance cybersecurity skills while preparing users for real-world attack and defense scenarios.",
     link: "https://github.com/Alessandro-Cavaliere/PT-Vulnerable-VM"
   },
@@ -61,7 +63,7 @@ const items = [
                          ITEM INTERFACE
 //////////////////////////////////////////////////////////////*/
 interface Item {
-  link: string;
+  link?: string;
   id: number;
   title: string;
   img: string;
@@ -97,9 +99,10 @@ return (
                     <img src={item.img} alt="" />
                 </div>
                 <motion.div className="textContainer" style={{ y }}>
-                    <h2>{item.title}</h2>
+                    <h2 style={{fontSize:"8vh"}}>{item.title}</h2>
                     <p>{item.desc}</p>
-                    <button onClick={() => item.link && window.open(item.link, "_blank")}>Open Project</button>
+                    {item.link &&
+                    <button onClick={() => window.open(item.link, "_blank")}>See More</button>}
                 </motion.div>
             </div>
         </div>

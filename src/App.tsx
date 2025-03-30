@@ -35,9 +35,7 @@ function App() {
           <section id="Experiences">
             <Parallax type="experiences" />
           </section>
-          <section>
-            <Experiences />
-          </section>
+          <Experiences />
           <section id="Projects">
             <Parallax type="projects" />
           </section>
