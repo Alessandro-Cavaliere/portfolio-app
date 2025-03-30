@@ -2,10 +2,10 @@ import { useRef } from "react";
 import "./experiences.scss";
 import { motion, useScroll, useSpring, useTransform} from "framer-motion";
 import ImageCarousel from "./Carousel";
-import CC1 from "/home/galexela/Documents/GitHub/portfolio-app/src/assets/cyberchallange/CC1.jpeg";
-import CC2 from "/home/galexela/Documents/GitHub/portfolio-app/src/assets/cyberchallange/CC2.jpeg";
-import CC3 from "/home/galexela/Documents/GitHub/portfolio-app/src/assets/cyberchallange/CC3.jpeg";
-import BlockchainDev from "/home/galexela/Documents/GitHub/portfolio-app/src/assets/experiences/BlockchainDev.jpg";
+import CC1 from "../../assets/cyberchallange/CC1.jpeg";
+import CC2 from "../../assets/cyberchallange/CC2.jpeg";
+import CC3 from "../../assets/cyberchallange/CC3.jpeg";
+import BlockchainDev from "../../assets/experiences/BlockchainDev.jpg";
 
 /*//////////////////////////////////////////////////////////////
                          EXPERIENCES OBJECTS
@@ -68,7 +68,7 @@ return (
                     <img style={{width:"80%"}} src={item.img[0]} alt="" />
                 </div>
                 }
-                <motion.div className="textContainer" style={{y}}>
+                <motion.div className="textContainer">
                     <h2 style={{fontSize:"8vh"}}>{item.title}</h2>
                     <p>{item.desc}</p>
                     {item.link &&

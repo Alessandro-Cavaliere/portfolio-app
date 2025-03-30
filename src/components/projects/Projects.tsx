@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import "./projects.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import zkpoex from "/home/galexela/Documents/GitHub/portfolio-app/src/assets/projects/zkp.jpeg";
-import pentest from "/home/galexela/Documents/GitHub/portfolio-app/src/assets/projects/pentest.png";
+import zkpoex from "../../assets/projects/zkp.jpeg";
+import pentest from "../../assets/projects/pentest.png";
 
 /*//////////////////////////////////////////////////////////////
                          PROJECT OBJECTS
