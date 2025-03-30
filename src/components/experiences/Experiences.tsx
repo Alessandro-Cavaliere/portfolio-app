@@ -68,7 +68,7 @@ return (
                     <img style={{width:"80%"}} src={item.img[0]} alt="" />
                 </div>
                 }
-                <motion.div className="textContainer" >
+                <motion.div className="textContainer" style={{y}}>
                     <h2 style={{fontSize:"8vh"}}>{item.title}</h2>
                     <p>{item.desc}</p>
                     {item.link &&
@@ -80,25 +80,7 @@ return (
 );
 };
 
-/*//////////////////////////////////////////////////////////////
-                     OBJECTS FOR FRAMER MOTION
-//////////////////////////////////////////////////////////////*/
-const variants = {
-  initial: {
-    x: -500,
-    y: 100,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-};
+
 
 /**
  * Experiences component -> renders the Experiences section of the application

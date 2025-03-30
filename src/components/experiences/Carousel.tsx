@@ -1,15 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, RefObject } from "react";
 
-export default function ImageCarousel({ images, refContainer }) {
+interface ImageCarouselProps {
+  images: string[];
+  refContainer: RefObject<HTMLDivElement>;
+}
+
+export default function ImageCarousel({ images, refContainer }: ImageCarouselProps) {
   const [index, setIndex] = useState(0);
 
   const handleNext = () => {
     setIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const handlePrev = () => {
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
@@ -30,7 +31,7 @@ export default function ImageCarousel({ images, refContainer }) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
-            style={{width:"100%", borderRadius:"20px", cursor:"pointer"}}
+            style={{ width: "100%", borderRadius: "20px", cursor: "pointer" }}
           />
         </AnimatePresence>
       </div>
