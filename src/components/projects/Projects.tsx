@@ -102,7 +102,7 @@ return (
                     <h2 style={{fontSize:"8vh"}}>{item.title}</h2>
                     <p>{item.desc}</p>
                     {item.link &&
-                    <button onClick={() => window.open(item.link, "_blank")}>See More</button>}
+                    <button onClick={() => window.open(item.link, "_blank")}>Open Project</button>}
                 </motion.div>
             </div>
         </div>
