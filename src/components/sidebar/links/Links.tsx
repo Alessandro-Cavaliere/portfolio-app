@@ -34,7 +34,7 @@ const Links: React.FC<LinksProps> = ({ setOpen }) => {
   /*//////////////////////////////////////////////////////////////
                              CONSTANTS
   //////////////////////////////////////////////////////////////*/
-  const items = ["Homepage", /*"Services",*/ "Projects", "Contact", /*"About"*/]; // When clicked, it will scroll to the respective section
+  const items = ["Homepage", "Experiences", "Projects", "Contact", /*"About"*/]; // When clicked, it will scroll to the respective section
 
   /*//////////////////////////////////////////////////////////////
                               RETURN
