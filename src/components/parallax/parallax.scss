@@ -18,20 +18,6 @@
     }
   }
 
-  .mountains {
-    background-image: url("/mountains.png");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 3;
-
-    @include mobile {
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  }
   .particles {
     background-size: cover;
     background-position: bottom;
@@ -43,14 +29,5 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
-  }
-  .stars {
-    background-image: url("/stars.png");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
   }
 }

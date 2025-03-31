@@ -9,6 +9,7 @@ import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 import Experiences from './components/experiences/Experiences';
 import Preloader from './components/preloader/Preloader';
+import TeamComponent from './components/ctf-team/TeamComponent';
 
 /**
  * App.tsx component -> main component of the application that renders all the other components
@@ -40,6 +41,10 @@ function App() {
             <Parallax type="projects" />
           </section>
           <Projects />
+          <section id="ByteTheCookies">
+            <TeamComponent/>
+          </section>
+          
           <section id="Contact">
             <Contact />
             <p className="copyright">Copyright © 2024 All copyrights reserved to Alessandro Cavaliere</p>

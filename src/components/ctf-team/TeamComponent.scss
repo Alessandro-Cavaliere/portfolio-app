@@ -1,0 +1,56 @@
+.team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(rgb(47, 73, 90), rgb(9, 14, 17));
+  color: #ffffff;
+}
+
+.team-h1 {
+  font-size: 80px;
+  z-index: 2;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.team-img {
+  width: 20%;
+  height: auto;
+}
+
+.team-gif-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  gap: 150px;
+}
+
+.team-gif {
+  width: 35%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.team-p {
+  width: 85%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.team-button {
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  font-size: large;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
