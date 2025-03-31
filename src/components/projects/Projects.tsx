@@ -39,7 +39,7 @@ const items = [
     id: 5,
     title: "PT-Vulnerable-VM",
     img: pentest,
-    desc: "Project for the exam of Penetration Testing & Ethical Hacking in the second year of the master's degree in CyberSecurity. This project is an exploration of the use of Long Short-Term Memory (LSTM) networks for emotion recognition. The project consists of a Virtual Machine (VM), intentionally vulnerable (vulnerable by design), aimed at testing and improving users' cybersecurity skills. Given that penetration testing is a discipline requiring practical abilities, this VM offers a safe, practical platform to learn, test, and enhance cybersecurity skills while preparing users for real-world attack and defense scenarios.",
+    desc: "Project for the exam of Penetration Testing & Ethical Hacking in the second year of the master's degree in CyberSecurity. The project consists of a Virtual Machine (VM), intentionally vulnerable (vulnerable by design), aimed at testing and improving users' cybersecurity skills. Given that penetration testing is a discipline requiring practical abilities, this VM offers a safe, practical platform to learn, test, and enhance cybersecurity skills while preparing users for real-world attack and defense scenarios.",
     link: "https://github.com/Alessandro-Cavaliere/PT-Vulnerable-VM"
   },
   {

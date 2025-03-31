@@ -16,14 +16,25 @@ This website is currently in **BETA** and will undergo further enhancements. In 
    - **Decentralized Storage:** (IPFS in future versions)
    - **Decentralized Domain:** (ENS **.eth domain** in future versions)
 
+## Experiences
+
+### 🌟 Experiences
+
+In the "Experiences" section of this portfolio you can see all my most important professional experiences.
+
+- **CyberChallenge.IT 2024:** National cybersecurity competition that I followed and faced the national competition.
+- **Blockchain Developer:** 1 year as a Blockchain Developer.
+
 ## 👨‍💻 Projects
 
 In the "Projects" section of the site you will find detailed descriptions of some of my most important projects carried out especially during the Master's degree period:
 
+- **Zero-Knowledge of Exploit:** My MSc Thesis project. This project is a Rust-based toolkit for proving Ethereum smart contract exploits using Zero-Knowledge Proofs.
 - **Modbus2Chain:** An IoT project integrating Modbus TCP protocol with blockchain.
 - **bytethecookies-nfts:** NFT collection project for the CTF By The Cookies team of which I am actively part.
-- **Decentralized Exchange - DEFI:** A DEX developed as part of my thesis on smart contracts and DEFI.
 - **FVAB_EmotionGait:** A project on emotion recognition using LSTM networks.
+- **PT-Vulnerable-VM:** I set up a Virtual Machine "vulnerable by design".
+- **Decentralized Exchange - DEFI:** A DEX developed as part of my thesis on smart contracts and DEFI.
 - **UnisaEAT:** A big project developed during the three-year degree period.
 
 Each project is hosted on GitHub, where you can explore the code, read what I have written, and see the development history.
@@ -44,6 +55,6 @@ This portfolio is currently in BETA. As I continue to develop it, you can expect
 Stay tuned for the launch of the decentralized version. 🔗🚀
 
 ## 📬 Contact
-Feel free to reach out to me via the contact links on the portfolio if you're interested in collaborating or learning more about my work.
+Feel free to reach out to me via the contact links on the portfolio or via the form at the end of the website if you're interested in collaborating or learning more about my works.
 
 Thank you for visiting!🙏
