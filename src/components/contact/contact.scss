@@ -59,7 +59,7 @@
 
       @include mobile {
         font-size: 36px;
-        line-height: 70px;
+        line-height: 50px;
       }
     }
 
@@ -73,7 +73,7 @@
     width: 100%;
     
     @include mobile {
-      padding: 0px 50px 0px 50px;
+      padding: 50px 50px 0px 50px;
       width: 100%;
     }
 
