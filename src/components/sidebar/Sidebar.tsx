@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Links from "./links/Links";
 import "./sidebar.scss";
@@ -34,15 +34,42 @@ const Sidebar = () => {
   /*//////////////////////////////////////////////////////////////
                             STATE DECLARATIONS
   //////////////////////////////////////////////////////////////*/
-  const [open, setOpen] = useState(false); //If Open it will pop up the sidebar with an animation
+  const [open, setOpen] = useState(false); // If open, it will pop up the sidebar with an animation
+  const sidebarRef = useRef<HTMLDivElement>(null); // Reference to the sidebar DOM node
+
+  /*//////////////////////////////////////////////////////////////
+                            EFFECTS
+  //////////////////////////////////////////////////////////////*/
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
+      }
+    };
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
 
   /*//////////////////////////////////////////////////////////////
                                RETURN
   //////////////////////////////////////////////////////////////*/
   return (
-    <motion.div className="sidebar" animate={open ? "open" : "closed"}> 
-      <motion.div className="bg" variants={variants} >
-        <Links setOpen={setOpen}/>
+    <motion.div
+      className="sidebar"
+      animate={open ? "open" : "closed"}
+      ref={sidebarRef}
+    >
+      <motion.div className="bg" variants={variants}>
+        <Links setOpen={setOpen} />
       </motion.div>
       <AnimatedMenuButton setOpen={setOpen} />
     </motion.div>
