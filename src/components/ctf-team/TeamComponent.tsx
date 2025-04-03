@@ -14,7 +14,7 @@ const TeamComponent = () => {
   return (
     <div className="team-container">
       <h1 className="team-h1">Meet my Team</h1>
-      <p className="team-p"> <strong style={{color:"orange"}}>ByteTheCookies (BTC)</strong> is a passionate CTF team formed by students from the University of Salerno after participating in the CyberChallengeIT 2024. 
+      <p className="team-p"> <strong style={{color:"orange"}}>ByteTheCookies (BTC)</strong> is a passionate CTF team formed by students from the University of Salerno after participating in the <strong style={{color:"orange"}}>CyberChallengeIT 2024</strong>. 
         Our mission is to push the boundaries of our skills and knowledge in the ever-evolving field of IT security. 
         We thrive on solving complex challenges, learning from each other, and staying ahead of the curve in cybersecurity. 
         Whether it’s cryptography, reverse engineering, web exploitation, or any other domain, we are committed to continuous growth and excellence.</p>
@@ -30,6 +30,7 @@ const TeamComponent = () => {
         muted
         playsInline
       />
+      
       </div>
       <button className="team-button" onClick={() => window.open("https://bytethecookies.github.io/", "_blank")}>View ByteTheCookies Website</button>
     </div>

@@ -35,13 +35,16 @@
         font-size: 30px;
         color: #0076b6;
         letter-spacing: 10px;
+        @include mobile {
+          font-size: 20px;
+        }
       }
 
       h1 {
         font-size: 58px;
 
         @include mobile {
-          font-size: 36px;
+          font-size: 20px;
         }
       }
 
@@ -92,5 +95,9 @@
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+    @include mobile {
+      font-size: 20vh;
+      bottom: 320px;
+    }
   }
 }

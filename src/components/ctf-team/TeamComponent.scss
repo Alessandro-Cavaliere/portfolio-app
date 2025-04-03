@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .team-container {
   display: flex;
   flex-direction: column;
@@ -16,11 +18,18 @@
   z-index: 2;
   margin-top: 80px;
   margin-bottom: 20px;
+  @include mobile{
+    font-size: 30px;
+    width: 90%;
+  } 
 }
 
 .team-img {
   width: 20%;
   height: auto;
+  @include mobile{
+    display: none;
+  } 
 }
 
 .team-gif-container{
@@ -31,18 +40,27 @@
   height: 100%;
   flex-direction: row;
   gap: 150px;
+  @include mobile{
+    gap: 20px;
+  } 
 }
 
 .team-gif {
   width: 35%;
-  height: auto;
   border-radius: 12px;
+  @include mobile{
+    width: 90%;
+  } 
 }
 
 .team-p {
   width: 85%;
   font-size: 1.2rem;
   line-height: 1.5;
+  @include mobile{
+    font-size: 16px;
+    text-wrap: balance;
+  } 
 }
 
 .team-button {
@@ -53,4 +71,7 @@
   padding: 10px;
   cursor: pointer;
   margin-bottom: 40px;
+  @include mobile{
+    font-size: medium;
+  } 
 }

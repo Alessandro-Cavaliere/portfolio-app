@@ -48,10 +48,7 @@ const Parallax = ({ type }: { type: string }) => {
       className="parallax"
       ref={ref}
       style={{
-        background:
-          type === "experiences"
-            ? "linear-gradient(180deg, rgb(47, 73, 90),rgb(9, 14, 17))"
-            : "linear-gradient(180deg, rgb(47, 73, 90),rgb(9, 14, 17))",
+        background: "linear-gradient(180deg, rgb(47, 73, 90),rgb(9, 14, 17))"
       }}
     >
       <motion.h1 style={{ y: yText }}>
@@ -118,7 +115,7 @@ const Parallax = ({ type }: { type: string }) => {
               number: {
                 density: {
                   enable: true,
-                  area: 800,
+                  area: 1000,
                 },
                 value: 60,
               },

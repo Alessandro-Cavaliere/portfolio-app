@@ -65,11 +65,11 @@ return (
                 {item.img.length > 1 ?
                 <ImageCarousel images={item.img} refContainer={ref} />:
                 <div className="imageContainer" ref={ref}>
-                    <img style={{width:"80%", borderRadius: "20px"}} src={item.img[0]} alt="" />
+                    <img style={{borderRadius:"20px",}} src={item.img[0]} alt="" />
                 </div>
                 }
                 <motion.div className="textContainer" style={{y}}>
-                    <h2 style={{fontSize:"8vh"}}>{item.title}</h2>
+                    <h2>{item.title}</h2>
                     <p>{item.desc}</p>
                     {item.link &&
                     <button onClick={() => window.open(item.link, "_blank")}>See More</button>}
@@ -105,7 +105,7 @@ const Experiences = () => {
                              RETURN
   //////////////////////////////////////////////////////////////*/
   return (
-    <div className="projects" ref={ref}>
+    <div className="experiences" ref={ref}>
       <div className="progress">
         <h1>Experiences</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
