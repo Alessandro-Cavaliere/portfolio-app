@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -46,6 +46,7 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const isInView = useInView(ref, { margin: "-10px" });
+  const [isMobile, setIsMobile] = useState(false);
 
   /*//////////////////////////////////////////////////////////////
                               FUNCTIONS
@@ -80,6 +81,14 @@ const Contact = () => {
         );
     }
   };
+
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 738);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   /*//////////////////////////////////////////////////////////////
                               RETURN  
@@ -116,7 +125,7 @@ const Contact = () => {
             whileInView={{ opacity: 0 }}
             transition={{ delay: 3, duration: 1 }}
           >
-            <svg className="svg" width="400px" height="400px" viewBox="0 0 32.666 32.666">
+            <svg width={isMobile ? "500px" : "500px"} height={isMobile ? "350px" : "350px"} viewBox="0 0 32.666 32.666">
               <motion.path
                 strokeWidth={0.2}
                 fill="none"
