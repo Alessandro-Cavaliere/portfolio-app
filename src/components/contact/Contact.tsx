@@ -125,7 +125,7 @@ const Contact = () => {
             whileInView={{ opacity: 0 }}
             transition={{ delay: 3, duration: 1 }}
           >
-            <svg width={isMobile ? "500px" : "500px"} height={isMobile ? "350px" : "350px"} viewBox="0 0 32.666 32.666">
+            <svg width={isMobile ? "500px" : "650px"} height={isMobile ? "350px" : "500px"} viewBox="0 0 32.666 32.666">
               <motion.path
                 strokeWidth={0.2}
                 fill="none"

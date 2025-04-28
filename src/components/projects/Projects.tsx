@@ -12,7 +12,8 @@ const items = [
     id: 1,
     title: "Zero-Knowledge of Exploit",
     img: zkpoex,
-    desc: "This is my MSc Thesis project. This project is a Rust-based toolkit for proving Ethereum smart contract exploits using Zero-Knowledge Proofs. The project explores proving contract vulnerabilities without revealing exploit details, ensuring security and verifiability. Running bug bounty programs in DeFi is challenging, often difficult to manage, and not always honored. This lack of incentives can lead to undisclosed exploits, weakening the security of the DeFi ecosystem. This software allows whitehat hackers to submit a cryptographic proof showing that a contract is exploitable without revealing exploit details. Once verified, the bounty can be automatically paid.",
+    desc: "This is my MSc Thesis project. This project is a Rust-based toolkit for proving Ethereum smart contract exploits using Zero-Knowledge Proofs. The project explores proving contract vulnerabilities without revealing exploit details, ensuring security and verifiability. This software allows whitehat hackers to submit a cryptographic proof showing that a contract is exploitable without revealing exploit details. Once verified, the bounty can be automatically paid.",
+    link: "https://github.com/ziemen4/zkpoex/"
   },
   {
     id: 2,
