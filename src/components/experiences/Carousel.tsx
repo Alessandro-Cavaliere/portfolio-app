@@ -3,7 +3,7 @@ import { useState, RefObject } from "react";
 
 interface ImageCarouselProps {
   images: string[];
-  refContainer: RefObject<HTMLDivElement>;
+  refContainer: RefObject<HTMLImageElement>;
 }
 
 export default function ImageCarousel({ images, refContainer }: ImageCarouselProps) {
