@@ -21,7 +21,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
                              USE EFFECT
     //////////////////////////////////////////////////////////////*/
     useEffect(() => {
-      const duration = 5000; 
+      const duration = 4000; 
       const interval = 50; 
       const totalSteps = duration / interval;
   
@@ -83,8 +83,9 @@ return (
             ))}
             </div>
             <p className="loading-text">
-                <span>My </span> <span>portfolio</span> <span>will</span> <span>be</span> <span>powered</span> <span>by</span> <span className="highlight">IPFS</span> <span>and</span> <span className="highlight">ESN</span> <span>,</span> <span>embracing</span> <span>decentralized</span> <span>hosting</span> <span>for</span> <span>a</span> <span>modern</span> <span>web</span> <span>experience!</span>
+              <span>My </span><span>portfolio</span> <span>is</span> <span>hosted</span> <span>on</span> <span className="highlight">IPFS</span> <span>and</span> <span className="highlight">ESN</span> <span>,</span> <span>embracing</span> <span>decentralized</span> <span>hosting</span> <span>for</span> <span>a</span> <span>modern</span> <span>web</span> <span>experience!</span>
             </p>
+
         </div>
     ) : null
 );
