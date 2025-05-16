@@ -1,6 +1,6 @@
 import "./TeamComponent.scss";
 import ctfteamvideo from "../../assets/ctfteam/ctfteam.mp4";
-import cookie from "../../assets/ctfteam/cookie.svg";
+import cookie from "../../assets/ctfteam/cookie.png";
 
 /**
  * TeamComponent.tsx component -> renders the TeamComponent effect on the screen
