@@ -41,7 +41,7 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="img-div">
-            <a href="http://localhost:5173">
+            <a href="https://alessandro-cavaliere.eth.limo/">
               <img src={acPhoto} alt="logo" className="image_style"/>
             </a>
             <p className="p_style" style={{maxWidth: pVisible}}>Alessandro Cavaliere</p>
