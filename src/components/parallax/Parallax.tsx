@@ -61,7 +61,7 @@ const Parallax = ({ type }: { type: string }) => {
         }}
       >
         <Particles
-          id="tsparticles"
+          id={`tsparticles-${type}`}
           init={particlesInit}
           loaded={particlesLoaded}
           options={{
