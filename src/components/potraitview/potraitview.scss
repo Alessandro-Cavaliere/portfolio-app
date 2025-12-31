@@ -46,6 +46,9 @@
         @include mobile {
           font-size: 20px;
         }
+        @include minimobile{
+          font-size: 18px;
+        }
       }
 
       .buttons {
@@ -84,6 +87,9 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @include minimobile{
+        height: 110%;
+      }
     }
   }
 

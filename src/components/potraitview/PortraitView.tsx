@@ -58,7 +58,7 @@ const PotraitView = () => {
         >
           <motion.h2 variants={textVariants}>ALESSANDRO CAVALIERE</motion.h2>
           <motion.h1 variants={textVariants}>
-            Blockchain Developer & <br/> Graduated MSc in Cybersecurity 
+            Blockchain Developer & <br/> Cyber Threat Intelligence Consultant  
           </motion.h1>
           <motion.img
             variants={textVariants}
