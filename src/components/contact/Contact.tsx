@@ -32,6 +32,10 @@ const spinnerVariants = {
   },
 };
 
+const isMiniMobile = window.innerWidth <= 375 && window.innerHeight <= 799;
+
+const isMobile = window.innerWidth <= 738 && window.innerHeight <= 1024;
+
 /**
  *  Contact.tsx component -> renders the contact section of the homepage with the form to send an email
  *  @returns JSX.Element that represents the contact component
@@ -46,7 +50,6 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const isInView = useInView(ref, { margin: "-10px" });
-  const [isMobile, setIsMobile] = useState(false);
 
   /*//////////////////////////////////////////////////////////////
                               FUNCTIONS
@@ -81,14 +84,6 @@ const Contact = () => {
         );
     }
   };
-
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 738);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   /*//////////////////////////////////////////////////////////////
                               RETURN  
@@ -125,7 +120,7 @@ const Contact = () => {
             whileInView={{ opacity: 0 }}
             transition={{ delay: 3, duration: 1 }}
           >
-            <svg width={isMobile ? "500px" : "650px"} height={isMobile ? "350px" : "500px"} viewBox="0 0 32.666 32.666">
+            <svg width={isMiniMobile ? "400px" : isMobile ? "500px" : "650px"} height={isMiniMobile ? "250px" : isMobile ? "350px" : "500px"} viewBox="0 0 32.666 32.666">
               <motion.path
                 strokeWidth={0.2}
                 fill="none"
@@ -171,7 +166,7 @@ const Contact = () => {
               })}
             />
 
-            <textarea rows={8} placeholder="Message" name="message" required />
+            <textarea rows={window.innerWidth <= 480? 3:8} placeholder="Message" name="message" required />
 
             <button type="submit" disabled={loading}>
               {loading ? (
@@ -192,7 +187,7 @@ const Contact = () => {
         </div>
       </motion.div>
       <p className="copyright">
-        Copyright © 2024 All copyrights reserved to Alessandro Cavaliere
+        Copyright © 2026 All copyrights reserved to Alessandro Cavaliere
       </p>
     </motion.div>
   );

@@ -52,6 +52,13 @@
       align-items: center;
       margin-top: 20px;
     }
+    @include minimobile{
+      gap: 10px;
+      text-align: center;
+      align-items: center;
+      margin-top: 50px;
+      font-size: small;
+    }
 
     h1 {
       font-size: 100px;
@@ -76,6 +83,9 @@
       padding: 50px 50px 0px 50px;
       width: 100%;
     }
+    @include minimobile{
+      padding: 0px 10px 0px 10px;
+    }
 
 
     .phoneSvg {
@@ -84,18 +94,28 @@
       margin: auto;
       z-index: -1;
       @include mobile {
-        top: 50%;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      @include minimobile{
+
+        top: 58%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
     }
 
     .svg {
-      width:"450px";
-      height:"450px";
+      width:"650px";
+      height:"500px";
       @include mobile {
-        width:"400px";
-        height:"400px";
+        width:"500px";
+        height:"350px";
+      }
+      @include minimobile{
+        width:"500px";
+        height:"350px";
       }
     }
 
@@ -114,6 +134,9 @@
 
         @include mobile {
           padding: 10px;
+        }
+        @include minimobile{
+          line-height: 24px;
         }
       }
 

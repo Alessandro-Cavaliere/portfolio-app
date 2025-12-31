@@ -22,6 +22,10 @@
     font-size: 30px;
     width: 90%;
   } 
+  @include minimobile{
+    font-size: 25px;
+    width: 90%;
+  }
 }
 
 .team-img {
@@ -61,6 +65,10 @@
     font-size: 16px;
     text-wrap: balance;
   } 
+  @include minimobile{
+    font-size: 14px;
+    width: 90%;
+  }
 }
 
 .team-button {
