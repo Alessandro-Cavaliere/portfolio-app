@@ -6,6 +6,7 @@ import CC1 from "../../assets/cyberchallange/CC1.jpeg";
 import CC2 from "../../assets/cyberchallange/CC2.jpeg";
 import CC3 from "../../assets/cyberchallange/CC3.jpeg";
 import BlockchainDev from "../../assets/experiences/BlockchainDev.jpg";
+import CTI from "../../assets/experiences/cti.png" 
 
 /*//////////////////////////////////////////////////////////////
                          EXPERIENCES OBJECTS
@@ -13,13 +14,19 @@ import BlockchainDev from "../../assets/experiences/BlockchainDev.jpg";
 const items = [
   {
     id: 1,
+    title: "Cyber Threat Intelligence Consultant",
+    img: [CTI],
+    desc: "Currently working as a Cyber Security Consultant in a Cyber Threat Intelligence Team. I analyze and report data breaches, monitor hacker forum activity, and provide actionable intelligence to clients. My work involves leveraging Google SecOps, researching CVE exploitation trends, tracking threat actor TTPs, and mapping findings to the MITRE ATT&CK framework, enabling preemptive security.",
+  },
+  {
+    id: 2,
     title: "CyberChallengeIT Finalist",
     img: [CC1, CC2, CC3],
     desc: "CyberChallenge.IT is the first cybersecurity training program for young talents between 16 and 24 years old, organized by the Cybersecurity National Lab. It is the main Italian initiative to identify, attract, recruit and place the next generation of cybersecurity professionals.",
     link: "https://www.cyberchallenge.it/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Blockchain Developer 01/2023 - 01/2024",
     img: [BlockchainDev],
     desc: "I have led private blockchain development projects using Geth, written and studied smart contracts in Solidity, and utilized technologies such as Node.js and Laravel (PHP). I have also worked extensively with Amazon AWS, including Amazon EC2 instances. Additionally, I developed the logic for a non-custodial crypto wallet supporting 5 different blockchains and built the related web application using React.js.",
