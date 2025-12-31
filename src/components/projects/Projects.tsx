@@ -3,6 +3,7 @@ import "./projects.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import zkpoex from "../../assets/projects/zkp.jpeg";
 import pentest from "../../assets/projects/pentest.png";
+import acmlogo from "../../assets/projects/acm.png"
 
 /*//////////////////////////////////////////////////////////////
                          PROJECT OBJECTS
@@ -12,8 +13,9 @@ const items = [
     id: 1,
     title: "Zero-Knowledge of Exploit",
     img: zkpoex,
-    desc: "This is my MSc Thesis project. This project is a Rust-based toolkit for proving Ethereum smart contract exploits using Zero-Knowledge Proofs. The project explores proving contract vulnerabilities without revealing exploit details, ensuring security and verifiability. This software allows whitehat hackers to submit a cryptographic proof showing that a contract is exploitable without revealing exploit details. Once verified, the bounty can be automatically paid. This research will be published for the ACM SAC 2026 conference on September 26, 2025.",
-    link: "https://github.com/ziemen4/zkpoex/"
+    desc: "My MSc thesis project: a Rust-based toolkit using Zero-Knowledge Proofs to prove Ethereum smart contract exploits without revealing details. Whitehat hackers submit cryptographic proofs for on-chain verification and automatic bounty payouts. It can be integrated into BugBounty platforms for seamless verification-to-payout workflows. I also wrote a scientific paper on this, peer-reviewed and accepted for the ACM SAC 2026 conference (March 23-27, 2026).",
+    link: "https://github.com/ziemen4/zkpoex/",
+    paper: "https://doi.org/10.1145/3748522.3779811"
   },
   {
     id: 2,
@@ -64,6 +66,7 @@ const items = [
                          ITEM INTERFACE
 //////////////////////////////////////////////////////////////*/
 interface Item {
+  paper?: string;
   link?: string;
   id: number;
   title: string;
@@ -102,8 +105,21 @@ return (
                 <motion.div className="textContainer" style={{ y }}>
                     <h2>{item.title}</h2>
                     <p>{item.desc}</p>
-                    {item.link &&
-                    <button onClick={() => window.open(item.link, "_blank")}>Open Project</button>}
+                    <div className="divButtonsProject">
+                    {item.link && (
+                      <button className="buttonLink" onClick={() => window.open(item.link, "_blank")}>Open Project</button>
+                    )}
+                    {item.title == "Zero-Knowledge of Exploit" && (
+                      <>
+                        <button className="buttonLink" onClick={() => window.open(item.paper, "_blank")} style={window.innerWidth > 1024 ? { marginLeft: 20 } : {}}>Paper</button>
+                        <img 
+                          src={acmlogo} 
+                          alt="ACM SAC 2026"
+                          className="acm"
+                        />
+                      </>
+                    )}
+                  </div>
                 </motion.div>
             </div>
         </div>
