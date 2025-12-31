@@ -47,7 +47,7 @@ function App() {
           
           <section id="Contact">
             <Contact />
-            <p className="copyright">Copyright © 2024 All copyrights reserved to Alessandro Cavaliere</p>
+            <p className="copyright">Copyright © 2026 All copyrights reserved to Alessandro Cavaliere</p>
           </section>
         </div>
       )}

@@ -29,9 +29,13 @@ html {
     overflow: hidden;
   }
   
-
+  @mixin minimobile {
+    @media (max-width: 375px) and (max-height: 799px) {
+      @content;
+    }
+  }
   @mixin mobile {
-    @media (max-width: 738px) {
+    @media (max-width: 738px) and (max-height: 1024px) {
       @content;
     }
   }
