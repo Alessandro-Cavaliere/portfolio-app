@@ -7,7 +7,7 @@ Welcome to the official repository for my personal portfolio website. This proje
 The primary goal of this portfolio is to provide a comprehensive overview of my professional journey. It serves as a platform to highlight the work I’ve done, including various projects hosted on GitHub. In this portfolio, I share the milestones that have shaped my career, such as the completion of my **Bachelor’s thesis** on **Decentralized Exchanges (DEXs)** and my pursuit of a **Master’s degree in Cybersecurity**.  
 
 💻 Finalist at [CyberChallenge.IT](https://cyberchallenge.it/) 2024, I am passionate about computer science and innovation ⚡.  
-🔐 For my Master’s Thesis, I developed during my **Erasmus+** a research framework in **Rust** exploring **Zero-Knowledge Proofs** and **Zero-Knowledge Virtual Machines** for privacy-preserving smart contract vulnerability disclosure. I also authored a research paper based on this work, which was accepted at a peer-reviewed academic conference. 
+🔐 For my Master’s Thesis, I developed during my **Erasmus+** a research framework in **Rust** exploring **Zero-Knowledge Proofs** and **Zero-Knowledge Virtual Machines** for privacy-preserving smart contract vulnerability disclosure. I also authored a research paper based on this work, which was accepted at a peer-reviewed academic conference.<br>
 🚀 Always eager to embrace new challenges and technologies in the world of **Blockchain** and **Web 3.0**.
 
 This website is self-hosted on a **Raspberry Pi 5** and deployed on a decentralized domain using the **Ethereum Name Service (ENS)**, with content stored on the **InterPlanetary File System (IPFS)**. This setup ensures resilience, privacy, and security, fully reflecting my passion for decentralized technologies.
